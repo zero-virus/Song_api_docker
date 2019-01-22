@@ -7,4 +7,5 @@ services:
     container_name: song_api_docker
     volumes:
       - .:/song_api_docker
-
+    ports:
+      - "8000:8000"
