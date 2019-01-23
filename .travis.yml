@@ -17,7 +17,6 @@ before_install:
   - echo "$HEROKU_PASSWORD" | docker login -u "$HEROKU_USERNAME" --password-stdin registry.heroku.com
 
 script: # => 7
-      - python manage.py test
       - docker build -t zero0virus/song_api .
       - docker tag zero0virus/song_api registry.heroku.com/$HEROKU_APP_NAME/web
     
