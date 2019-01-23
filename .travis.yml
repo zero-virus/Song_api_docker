@@ -2,9 +2,6 @@ sudo: required
 
 language: python # => 1
 
-python: # => 2
-  - "3.6.2"
-
 services:
   docker
 
@@ -19,8 +16,7 @@ before_install:
 script: # => 7
       - python manage.py test
       - docker build -t zero0virus/song_api .
-      - docker tag zero0virus/song_api
-      registry.heroku.com/$HEROKU_APP_NAME/web
+      - docker tag zero0virus/song_api registry.heroku.com/$HEROKU_APP_NAME/web
     
 deploy:
   provider: script
