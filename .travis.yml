@@ -18,14 +18,14 @@ before_install:
 
 script: # => 7
       - python manage.py test
-      - docker build -t zero0virus/song_api_docker_web .
-      - docker tag zero0virus/song_api_docker_web registry.heroku.com/$HEROKU_APP_NAME/web
+      - docker build -t zero0virus/song_api .
+      - docker tag zero0virus/song_api registry.heroku.com/$HEROKU_APP_NAME/web
     
 deploy:
   provider: script
   script:
     # push to dockerhub
-    docker push zero0virus/song_api_docker_web;
+    docker push zero0virus/song_api;
     docker push registry.heroku.com/$HEROKU_APP_NAME/web;
     heroku container:release web --app $HEROKU_APP_NAME
 
