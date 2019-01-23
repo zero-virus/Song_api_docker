@@ -1,6 +1,6 @@
 sudo: required
 
-language: python # => 1
+language: python
 
 services:
   docker

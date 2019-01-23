@@ -15,4 +15,4 @@ WORKDIR /song_api_docker
 ADD . /song_api_docker/
 
 # Install any needed packages specified in requirements.txt
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
