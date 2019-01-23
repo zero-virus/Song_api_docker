@@ -25,7 +25,7 @@ SECRET_KEY = '5m+kq&^z&$(u@)f_h-ozdgr)5n^%&94iput7z!3oyn47*y=1y3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['songs-api-travis.herokuapp.com']
 
 
 # Application definition
